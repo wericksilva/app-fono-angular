@@ -5,12 +5,11 @@
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
-    "build": "ng build",
+    "start": "ng serve",
+    "lint": "tslint \"src/**/*.ts\" --project src/tsconfig.json --type-check && tslint \"e2e/**/*.ts\" --project e2e/tsconfig.json --type-check",
     "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "pstinstall": "ng build --aot -prod",
-    "start": "node server.js"
+    "pree2e": "webdriver-manager update --standalone false --gecko false",
+    "e2e": "protractor"
   },
   "private": true,
   "dependencies": {
@@ -50,8 +49,5 @@
     "tslint": "4.5.0",
     "typescript": "2.2.0",
     "webdriver-manager": "10.2.5"
-  }, "engines": {
-    "node": "v8.11.1",
-    "yarn": "1.0.2"
   }
 }
