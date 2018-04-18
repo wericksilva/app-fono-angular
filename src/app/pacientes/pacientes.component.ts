@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Paciente } from './paciente/paciente.model';
+import { PacientesService } from './pacientes.service';
 
 @Component({
   selector: 'mt-pacientes',
@@ -8,25 +9,15 @@ import { Paciente } from './paciente/paciente.model';
 export class PacientesComponent implements OnInit {
 
 
-  pacientes : Paciente [] = [  {
+  pacientes : Paciente [] 
 
-  
-    id: "1",
-    nome: "Werick Silva",
-    sexo: "Masculino",
-    dataNascimento: "27/08/1991",
-    caminoImagem: "assets/img/pacientes/werick.jpg",
-    peso: 10.0},
-    {
-    id: "2",
-    nome: "Samanta Oliveira",
-    sexo: "Feminino",
-    dataNascimento: "02/08/1993",
-    caminoImagem: "assets/img/pacientes/samy.jpg",
-    peso: 10.0}]
-  constructor() { }
+    
+  constructor(private pacienteServide: PacientesService) { }
 
   ngOnInit() {
+
+    this.pacienteServide.pacientes().subscribe(pacientes => this.pacientes = pacientes)
+
   }
 
 }
