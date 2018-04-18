@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AtividadeItem } from '../atividade-item/atividade-item.model';
 
 @Component({
   selector: 'mt-atividades',
@@ -10,5 +11,10 @@ export class AtividadesComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  addAtividadeItem(item: AtividadeItem){
+    console.log(item);
+  }
+
 
 }
