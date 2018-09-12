@@ -1,0 +1,9 @@
+diff a/src/app/app.component.html b/src/app/app.component.html	(rejected hunks)
+@@ -11,6 +11,7 @@
+ 
+   <!-- snakbar deve ser aqui -->
+    <!-- snakbar deve ser aqui teste -->
++    <!-- snakbar deve ser aqui -->
+      <!-- snakbar deve ser aqui -->
+   <footer class="main-footer">
+     <div class="container">
