@@ -7,6 +7,8 @@ describe('AtividadeItemComponent', () => {
   let fixture: ComponentFixture<AtividadeItemComponent>;
 
   beforeEach(async(() => {
+    
+    
     TestBed.configureTestingModule({
       declarations: [ AtividadeItemComponent ]
     })

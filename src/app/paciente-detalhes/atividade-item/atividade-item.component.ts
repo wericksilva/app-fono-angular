@@ -7,7 +7,6 @@ import { AtividadeItem } from './atividade-item.model';
 })
 export class AtividadeItemComponent implements OnInit {
 
-
   @Input() atividadeItem:  AtividadeItem
   @Output() add = new EventEmitter()
 
@@ -16,7 +15,6 @@ export class AtividadeItemComponent implements OnInit {
   ngOnInit() {
 
   }
-
 
   emitAddEvent(){
     this.add.emit(this.atividadeItem);
