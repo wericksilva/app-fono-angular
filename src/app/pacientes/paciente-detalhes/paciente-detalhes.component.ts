@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { PacientesService } from '../pacientes/pacientes.service';
-import { Paciente } from '../pacientes/paciente/paciente.model';
+
 import { ActivatedRoute } from '@angular/router';
+import { PacientesService } from '../pacientes.service';
+import { Paciente } from '../paciente/paciente.model';
 
 @Component({
   selector: 'mt-paciente-detalhes',

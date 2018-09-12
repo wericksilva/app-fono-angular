@@ -11,11 +11,12 @@ import { AboutComponent } from './about/about.component';
 import { PacientesComponent } from './pacientes/pacientes.component';
 import { PacienteComponent } from './pacientes/paciente/paciente.component';
 import { PacientesService } from './pacientes/pacientes.service';
-import { PacienteDetalhesComponent } from './paciente-detalhes/paciente-detalhes.component';
-import { AtividadesComponent } from './paciente-detalhes/atividades/atividades.component';
-import { CadastroAtividadeComponent } from './paciente-detalhes/cadastro-atividade/cadastro-atividade.component';
-import { AtividadeItemComponent } from './paciente-detalhes/atividade-item/atividade-item.component';
-import { AvaliacoesComponent } from './paciente-detalhes/avaliacoes/avaliacoes.component';
+import { PacienteDetalhesComponent } from './pacientes/paciente-detalhes/paciente-detalhes.component';
+import { AtividadesComponent } from './pacientes/paciente-detalhes/atividades/atividades.component';
+import { CadastroAtividadeComponent } from './pacientes/paciente-detalhes/cadastro-atividade/cadastro-atividade.component';
+import { AtividadeItemComponent } from './pacientes/paciente-detalhes/atividade-item/atividade-item.component';
+import { AvaliacoesComponent } from './pacientes/paciente-detalhes/avaliacoes/avaliacoes.component';
+import { CadastroPacientesComponent } from './pacientes/cadastro-pacientes/cadastro-pacientes.component';
 
 
 
@@ -32,7 +33,8 @@ import { AvaliacoesComponent } from './paciente-detalhes/avaliacoes/avaliacoes.c
     AtividadesComponent,
     CadastroAtividadeComponent,
     AtividadeItemComponent,
-    AvaliacoesComponent
+    AvaliacoesComponent,
+    CadastroPacientesComponent
   ],
   imports: [
     BrowserModule,
