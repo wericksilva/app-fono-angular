@@ -2,16 +2,23 @@
 <section class="content-header">
   <h1>
     Todos os Pacientes
+    <form>
+      <div class="form-group" style="margin-top: 20px">
+        <input type="text" class="form-control" placeholder="Digite o nome do paciente para pesquisar." />
+      </div>
+    </form>
   </h1>
+  <!--Barra de busca-->
+
 </section>
 
 
 <section class="content">
 
   <div class="row">
-          <div *ngFor="let paciente of pacientes"class="col-sm-6 col-xs-12" >
-            <mt-paciente [paciente]="paciente"></mt-paciente>
-          </div>
+    <div *ngFor="let paciente of pacientes" class="col-sm-6 col-xs-12">
+      <mt-paciente [paciente]="paciente"></mt-paciente>
+    </div>
   </div>
 
 </section>
