@@ -1,47 +1,41 @@
 <div class="container">
-  <h1>Cadastro Paciente</h1>
+  <h1>Cadastro de Paciente</h1>
 
-
-  <form>
+  <form #form="ngForm" novalidate>
     <div class="row">
-      <div class="col-md-6">
-        <label>Nome</label>
-        <input type="text" class="form-control" id="nome" required>
-      </div>
+     <mt-input-container erroMensagem="Campo Obrigatório" label="Nome">
+        <input type="text" name="nome" ngModel class="form-control" required autocomplete="off" />
+     </mt-input-container>
       <div class="col-md-6">
         <label>Data Nascimento</label>
-        <input type="text" class="form-control" id="dataNascimento" />
+        <input type="text" 
+        name="dataNascimento" ngModel class="form-control" id="dataNascimento" />
       </div>
     </div>
 
     <div class="row">
       <div class="col-md-6">
         <label>Endereço</label>
-        <input type="text" class="form-control" id="endereco" required>
+        <input type="text" class="form-control" id="endereco">
       </div>
       <div class="col-md-6">
-        <label>Telefoneo</label>
+        <label>Telefone</label>
         <input type="text" class="form-control" id="telefone" />
       </div>
     </div>
 
 
-    <div class="row" style="margin-top: 24px;">
-      <div class="col-md-6">
-        <label class="form-check-label" for="inlineRadio1">Plano de Saude: </label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <label class="form-check-label" for="inlineRadio2">Sim :</label>
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-      </div>
-    </div>
 
-   <div class="row">
-      <div class="col-md-6">
-        <label class="form-check-label" for="inlineRadio2">Não:</label>
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+    <div class="row" style="margin-top: 10px">
+      <legend class="col-sm-2 pt-0">Plano de Saúde</legend>
+
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+        <label class="custom-control-label" for="customRadioInline1">Sim</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+        <label class="custom-control-label" for="customRadioInline2">Não</label>
       </div>
     </div>
 
@@ -85,7 +79,7 @@
       <div lass="row">
         <input type="file" class="custom-file-input" id="inputGroupFile01">
 
-        <button type="submit" class="btn btn-success" style="margin-top: 24px; margin-bottom: 15px; text-align: right">Salvar</button>
+        <button (click)="salvarPaciente(form.value)" type="submit" [disabled]="!form.valid" class="btn btn-success" style="margin-top: 24px; margin-bottom: 15px; text-align: right">Salvar</button>
       </div>
     </div>
 

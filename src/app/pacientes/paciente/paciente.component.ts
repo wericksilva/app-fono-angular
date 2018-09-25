@@ -8,7 +8,7 @@ import { Paciente } from './paciente.model';
 export class PacienteComponent implements OnInit {
 
 
-  @Input () paciente:  Paciente
+ 
 
 
   

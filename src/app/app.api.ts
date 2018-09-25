@@ -1,0 +1,1 @@
+export const PACIENTE_API = 'http://api-fono.mrpza2w3pq.us-east-2.elasticbeanstalk.com'

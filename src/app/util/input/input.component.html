@@ -1,0 +1,11 @@
+<div class="col-md-6" [class.has-success]="hasSuccess()" 
+[class.has-error]="hasError()">
+    <label>{{label}}</label>
+    <ng-content></ng-content>
+    <span class="help-block" *ngIf="hasSuccess()">
+      <i class="fa fa-check">OK</i>
+    </span>
+    <span class="help-block" *ngIf="hasError()">
+      <i class="fa fa-remove">{{erroMensagem}}</i>
+    </span>
+  </div>

@@ -9,6 +9,7 @@ export class CadastroAtividadeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }
