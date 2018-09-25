@@ -22,10 +22,20 @@ export class PacientesService {
     }
 
     pacientesPorId(id: string):  Observable<Paciente> {
-
         return this.http.get(`${PACIENTE_API}/pacientes/${id}`)
         .map(response => response.json())
         ._catch(ErrorHandler.handlerError);
     }
 
+    deletePacientesPorId(id: string):  Observable<Paciente> {
+        return this.http.delete(`${PACIENTE_API}/pacientes/${id}`)
+        ._catch(ErrorHandler.handlerError);
+    }
+
+    cadastrarPaciente(paciente: Paciente):  Observable<Paciente> {
+        return this.http.post(`${PACIENTE_API}/pacientes/`, paciente)
+        ._catch(ErrorHandler.handlerError);
+    }
+
+    
 }

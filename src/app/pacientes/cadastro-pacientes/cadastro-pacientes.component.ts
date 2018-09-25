@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Paciente } from '../paciente/paciente.model';
+import { PacientesService } from '../pacientes.service';
 
 @Component({
   selector: 'mt-cadastro-pacientes',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroPacientesComponent implements OnInit {
 
-  constructor() { }
+  errorMessage: string;
+
+  constructor(private pacienteServide: PacientesService) { }
 
   ngOnInit() {
   }
+
+  salvarPaciente(paciente: Paciente) {
+    this.pacienteServide.cadastrarPaciente(paciente).subscribe((res: any) => {
+    }, error => this.errorMessage = error);
+    console.log(paciente);
+  }
+
+  
 
 }

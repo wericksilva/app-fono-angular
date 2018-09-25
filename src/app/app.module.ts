@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-
+import { FormsModule }   from '@angular/forms';
 import {ROUTES} from './app.routes';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -17,6 +17,7 @@ import { CadastroAtividadeComponent } from './pacientes/paciente-detalhes/cadast
 import { AtividadeItemComponent } from './pacientes/paciente-detalhes/atividade-item/atividade-item.component';
 import { AvaliacoesComponent } from './pacientes/paciente-detalhes/avaliacoes/avaliacoes.component';
 import { CadastroPacientesComponent } from './pacientes/cadastro-pacientes/cadastro-pacientes.component';
+import { InputComponent } from './util/input/input.component';
 
 
 
@@ -34,11 +35,13 @@ import { CadastroPacientesComponent } from './pacientes/cadastro-pacientes/cadas
     CadastroAtividadeComponent,
     AtividadeItemComponent,
     AvaliacoesComponent,
-    CadastroPacientesComponent
+    CadastroPacientesComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
+    FormsModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [PacientesService],
