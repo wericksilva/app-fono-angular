@@ -14,7 +14,7 @@
               <div class="news">
                 <div class="panel panel-info">
                   <div class="panel-heading">
-                    Dados Consulta </div>
+                    Dados Paciente </div>
                   <div class="panel-body">
                 <div class="row" style="text-align: center">
                   <div class="col-md-6">
@@ -67,10 +67,16 @@
                 <div class="row" style="margin-top: 18px">
                   <div class="col-md-6">
                     <label>Plano de Saúde</label>
-                    <select class="form-control">
+                    <select ngModel name="plano" class="form-control">
                       <option>Sim</option>
                       <option>Não</option>
                     </select>
+                    <select ngModel name="plano" class="form-control">
+                        <option>Amil</option>
+                        <option>Unimede </option>
+                        <option>Sul América </option>
+                        <option>Bradesco</option>
+                      </select>
                   </div>
                   <div class="col-md-6">
                     <label>Data de entrada na clínica</label>
