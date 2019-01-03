@@ -7,5 +7,6 @@ export interface Paciente {
    dataNascimento: string
    caminoImagem: string
    peso: number
+   plano: boolean
 
 }

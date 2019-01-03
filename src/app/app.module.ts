@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
-import { FormsModule }   from '@angular/forms';
+import { RouterModule, PreloadAllModules } from '@angular/router';
+import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import {ROUTES} from './app.routes';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -18,6 +18,9 @@ import { AtividadeItemComponent } from './pacientes/paciente-detalhes/atividade-
 import { AvaliacoesComponent } from './pacientes/paciente-detalhes/avaliacoes/avaliacoes.component';
 import { CadastroPacientesComponent } from './pacientes/cadastro-pacientes/cadastro-pacientes.component';
 import { InputComponent } from './util/input/input.component';
+import {LocationStrategy, HashLocationStrategy} from '@angular/common';
+import { LoginComponent } from './security/login/login.component'
+import { AuthService } from './security/auth.service';
 
 
 
@@ -36,15 +39,19 @@ import { InputComponent } from './util/input/input.component';
     AtividadeItemComponent,
     AvaliacoesComponent,
     CadastroPacientesComponent,
-    InputComponent
+    InputComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
-    RouterModule.forRoot(ROUTES)
+    ReactiveFormsModule,
+    RouterModule.forRoot(ROUTES, {preloadingStrategy: PreloadAllModules})
   ],
-  providers: [PacientesService],
+
+ 
+  providers: [AuthService, PacientesService, {provide: LocationStrategy, useClass: HashLocationStrategy}, {provide: LOCALE_ID, useValue: 'pt-BR'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

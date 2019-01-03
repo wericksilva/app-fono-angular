@@ -14,7 +14,7 @@
               <div class="news">
                 <div class="panel panel-info">
                   <div class="panel-heading">
-                    Dados Consulta </div>
+                    Dados Paciente </div>
                   <div class="panel-body">
                 <div class="row" style="text-align: center">
                   <div class="col-md-6">
@@ -38,18 +38,20 @@
                 <div>
                   <label for="exampleFormControlSelect1">Sexo</label>
                   <select class="form-control" id="exampleFormControlSelect1">
-                    <option>Masculino</option>
-                    <option>Feminino</option>
+                      <option value="" selected disabled>Selecione</option>
+                    <option value="M">Masculino</option>
+                    <option value="F">Feminino</option>
                   </select>
                 </div>
                 <div class="row" style="margin-top: 25px; margin-bottom: 92px;">
                   <div class="col-md-6">
                     <label>Data Nascimento</label>
-                    <input type="text" class="form-control" id="telefone" />
+                    <input type="date" class="form-control date" id="telefone" />
                   </div>
                   <div class="col-md-6">
-                    <label>Telefone</label>
-                    <input type="text" class="form-control" id="telefone" />
+                    
+                   
+                    <input type="tel" class="form-control" id="telefone" />
                   </div>
                 </div>
               </div>
@@ -67,12 +69,20 @@
                 <div class="row" style="margin-top: 18px">
                   <div class="col-md-6">
                     <label>Plano de Saúde</label>
-                    <select class="form-control">
+                    <select ngModel name="plano" class="form-control">
+                      <option  value="" selected disabled>Selecione</option>
                       <option>Sim</option>
                       <option>Não</option>
                     </select>
+                    <select style="margin-top: 10px;" ngModel name="plano" class="form-control">
+                        <option value="" selected disabled>Selecione</option>
+                        <option>Amil</option>
+                        <option>Unimede </option>
+                        <option>Sul América </option>
+                        <option>Bradesco</option>
+                      </select>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6" style="margin-top: 10px;">
                     <label>Data de entrada na clínica</label>
                     <input type="text" class="form-control" id="dataEntrada" />
                   </div>
@@ -92,12 +102,10 @@
                     <label>Tipo de terapia</label>
                     <textarea class="form-control" rows="5" id="tipoTerapia"></textarea>
                   </div>
-                  <div class="row">
                     <div class="col-md-6">
                       <label>Encaminhamentos</label>
                       <textarea class="form-control" rows="5" id="encaminhamentos"></textarea>
                     </div>
-                  </div>
                 </div>
               </div>
             </div>
