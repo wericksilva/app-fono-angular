@@ -1,5 +1,5 @@
 {
-  "name": "meat",
+  "name": "fono",
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
@@ -36,6 +36,9 @@
     "intl": "1.2.5",
     "jquery": "3.1.1",
     "ng-animate": "^0.3.4",
+    "ng2-input-mask": "0.0.7",
+    "ng2-tel-input": "^1.0.16",
+    "ngx-mask": "^6.5.18",
     "reflect-metadata": "0.1.9",
     "rxjs": "5.1.0",
     "ts-helpers": "1.1.2",

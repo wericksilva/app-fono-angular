@@ -21,7 +21,7 @@
         <th style="text-align: center">Nome</th>
         <th style="text-align: center">Data Nascimento</th>
         <th style="text-align: center">Sexo</th>
-        <th style="text-align: center">Plano</th>
+      
         <th style="text-align: center">Ações</th>
       </tr>
     </thead>
@@ -31,9 +31,7 @@
         <th style="text-align: center">{{paciente.nome}}</th>
         <td style="text-align: center">{{paciente.dataNascimento | date:'dd/MM/yyyy'}}</td>
         <td style="text-align: center">{{paciente.sexo}}</td>
-        <td style="text-align: center">
-          <span style="color:green" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-        </td>
+        
         <td style="text-align: center">
 
           <a routerLink="/paciente/{{paciente.id}}" class="glyphicon glyphicon-th-list" style="color:green; padding-right: 20px; "></a>
