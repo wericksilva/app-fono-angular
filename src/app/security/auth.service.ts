@@ -19,8 +19,8 @@ export class AuthService {
   ) {}
 
   login(user: User) {
-    if (user.userName === 'fono' && user.password === '2018' ) {
-      console.log(user.userName + '  - ' + user.password);
+   if (user.userName === 'Samanta' && user.password === '2022' ) {
+    //  console.log(user.userName + '  - ' + user.password);
       this.loggedIn.next(true);
       this.router.navigate(['/home']);
     }
